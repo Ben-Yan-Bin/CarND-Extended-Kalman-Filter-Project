@@ -86,6 +86,17 @@ int main()
           		iss >> ro;
           		iss >> theta;
           		iss >> ro_dot;
+              // There are there line of data are not correct @line 273, 400, 408 in the data file
+//              if (theta > 3.1415926) {
+//                  if (theta > 3.17) {
+//                      theta = -3.1415;
+//                  } else {
+//                      theta = 3.1415;
+//                  }
+//              }
+//              if (theta < -3.1415926) {
+//                  theta = -3.1415;
+//              }
           		meas_package.raw_measurements_ << ro,theta, ro_dot;
           		iss >> timestamp;
           		meas_package.timestamp_ = timestamp;
